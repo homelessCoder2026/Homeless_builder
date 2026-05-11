@@ -70,12 +70,12 @@
         <p>I've lost many years to drug addiction. I hit rock bottom.</p>
         <p>Now I'm <strong>sober</strong>, homeless, and fighting for a better life. Instead of giving up, I'm addicted to building.</p>
         <p>Every day I'm teaching myself to code on this phone using Termux. I have so many ideas that could solve real problems in the crypto space, but I have no money to promote them, buy tools, or get noticed.</p>
-        <p>This website you're looking at right now was built entirely from my phone while homeless. Every sat you send helps me eat, stay connected, learn faster, and one day launch something big.</p>
+        <p>This website you're looking at right now was built entirely from my phone while homeless. Every sat or dollar you send helps me eat, stay connected, learn faster, and one day launch something big.</p>
         <p>I just need a real chance. Help me come out with the next big thing.</p>
     </div>
 
     <div class="address-box">
-        <strong>⚡ Lightning Address (Recommended - Fast & Cheap)</strong><br><br>
+        <strong>⚡ Lightning Address (Best - Fast & Cheap)</strong><br><br>
         <span style="color:#ff9800; font-size:1.15em;">punyplastic250@walletofsatoshi.com</span>
     </div>
 
@@ -86,9 +86,14 @@
     <button onclick="sendSats(5000)">5,000 sats</button>
     <button onclick="sendSats(10000)">10,000 sats</button>
 
-    <div class="address-box" style="margin-top: 30px;">
-        <strong>₿ Bitcoin On-Chain Address</strong><br><br>
+    <div class="address-box" style="margin-top: 25px;">
+        <strong>₿ Bitcoin On-Chain</strong><br><br>
         bc1qxy2kdykj9s3v5z9zq3zq3zq3zq3zq3zq3zq3z
+    </div>
+
+    <div class="address-box" style="margin-top: 25px; border-color: #00d4ff;">
+        <strong>$ Cash App (USD)</strong><br><br>
+        <span style="color:#00d4ff; font-size:1.25em;">$EmpireOfTheLost</span>
     </div>
 
     <script>
@@ -100,9 +105,9 @@
             })
             .then(r => r.json())
             .then(data => {
-                alert(`🙏 Thank you so much!\n\n${data.message}\n\nYou're helping me build from rock bottom.`);
+                alert(`🙏 Thank you!\n\n${data.message}`);
             })
-            .catch(() => alert("Flask server needs to be running for the buttons to work."));
+            .catch(() => alert("Flask server needs to be running."));
         }
     </script>
 </body>
