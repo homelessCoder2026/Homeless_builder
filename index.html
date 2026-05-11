@@ -36,7 +36,7 @@
             border: 1px solid #00ff8822;
         }
         
-        .address-box {
+        .payment-box {
             background: #111;
             padding: 20px;
             border-radius: 12px;
@@ -46,19 +46,6 @@
             word-break: break-all;
             border: 2px solid #ff9800;
         }
-        
-        button {
-            background: #ff9800;
-            color: black;
-            border: none;
-            padding: 16px 26px;
-            margin: 8px 6px;
-            font-size: 17px;
-            font-weight: 700;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-        button:hover { background: #ffb74d; transform: scale(1.05); }
     </style>
 </head>
 <body>
@@ -69,46 +56,31 @@
         <h2>My Story</h2>
         <p>I've lost many years to drug addiction. I hit rock bottom.</p>
         <p>Now I'm <strong>sober</strong>, homeless, and fighting for a better life. Instead of giving up, I'm addicted to building.</p>
-        <p>Every day I'm teaching myself to code on this phone using Termux. I have so many ideas that could solve real problems in the crypto space, but I have no money to promote them, buy tools, or get noticed.</p>
-        <p>This website you're looking at right now was built entirely from my phone while homeless. Every sat or dollar you send helps me eat, stay connected, learn faster, and one day launch something big.</p>
+        <p>Every day I'm teaching myself to code on this phone using Termux. I have so many ideas that could solve real problems in the crypto space, but I have no money to promote them or get noticed.</p>
+        <p>This website was built entirely from my phone while homeless. Every sat or dollar you send helps me eat, stay connected, and keep building.</p>
         <p>I just need a real chance. Help me come out with the next big thing.</p>
     </div>
 
-    <div class="address-box">
-        <strong>⚡ Lightning Address (Best - Fast & Cheap)</strong><br><br>
-        <span style="color:#ff9800; font-size:1.15em;">punyplastic250@walletofsatoshi.com</span>
-    </div>
-
     <h2>Support the Mission</h2>
-    <button onclick="sendSats(100)">100 sats</button>
-    <button onclick="sendSats(500)">500 sats</button>
-    <button onclick="sendSats(1000)">1,000 sats</button>
-    <button onclick="sendSats(5000)">5,000 sats</button>
-    <button onclick="sendSats(10000)">10,000 sats</button>
 
-    <div class="address-box" style="margin-top: 25px;">
-        <strong>₿ Bitcoin On-Chain</strong><br><br>
-        bc1qxy2kdykj9s3v5z9zq3zq3zq3zq3zq3zq3zq3z
+    <div class="payment-box">
+        <strong>⚡ Lightning Address (Fastest & Cheapest)</strong><br><br>
+        <span style="color:#ff9800; font-size:1.2em;">punyplastic250@walletofsatoshi.com</span>
     </div>
 
-    <div class="address-box" style="margin-top: 25px; border-color: #00d4ff;">
+    <div class="payment-box" style="border-color: #f7931a;">
+        <strong>₿ Bitcoin On-Chain</strong><br><br>
+        <span style="font-size:1.05em;">bc1qxy2kdykj9s3v5z9zq3zq3zq3zq3zq3zq3zq3z</span>
+    </div>
+
+    <div class="payment-box" style="border-color: #00d4ff;">
         <strong>$ Cash App (USD)</strong><br><br>
         <span style="color:#00d4ff; font-size:1.25em;">$EmpireOfTheLost</span>
     </div>
 
-    <script>
-        function sendSats(amount) {
-            fetch('/create_invoice', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({amount: amount})
-            })
-            .then(r => r.json())
-            .then(data => {
-                alert(`🙏 Thank you!\n\n${data.message}`);
-            })
-            .catch(() => alert("Flask server needs to be running."));
-        }
-    </script>
+    <p style="margin-top: 40px; color: #888;">
+        Thank you for believing in second chances ❤️<br>
+        Every little bit helps me keep building.
+    </p>
 </body>
 </html>
